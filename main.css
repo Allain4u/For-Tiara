@@ -1,0 +1,116 @@
+/* Reset margin dan padding untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container utama dengan jarak 3em di sekelilingnya dan animasi masuk */
+  .container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 3em;
+    width: calc(100% - 6em);
+    height: calc(100vh - 6em);
+    text-align: center;
+    overflow-y: auto;
+    
+    /* Sembunyikan scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* Animasi container */
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Animasi keyframes untuk fade-in dan slide-up */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Gaya untuk judul utama */
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #d6336c;
+    margin-bottom: 1rem;
+  }
+  
+  /* Gaya untuk paragraf */
+  p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Gaya khusus untuk judul gallery */
+  .gallery-title {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #d6336c;
+  }
+  
+  /* Container gallery diatur sebagai grid 3 kolom */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em;
+    margin-top: 1em;
+  }
+  
+  /* Setiap item gallery */
+  .gallery-item {
+    overflow: hidden;
+  }
+  
+  /* Gaya untuk gambar agar mengisi grid cell dengan rasio 1:1 */
+  .gallery-item img {
+    width: 75%;              /* Ukuran gambar 75% dari lebar container gallery-item */
+    aspect-ratio: 1 / 1;      /* Memastikan rasio 1:1 */
+    object-fit: cover;        /* Gambar dipotong agar tetap proporsional */
+    border-radius: 4px;       /* Sedikit membulatkan sudut gambar */
+    display: block;          /* Agar margin auto dapat bekerja */
+    margin: 0 auto;          /* Menengahkan gambar secara horizontal */
+  }
+  
+  /* Container tombol */
+  .button-container {
+    margin-top: 1.5em;
+    text-align: center;
+  }
+  
+  /* Gaya tombol */
+  .btn {
+    background-color: #ff4081;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75em 1.5em;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #d6336c;
+  }
+  
